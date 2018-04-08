@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>Dabbing Simulation</title>
+	<meta charset="utf-8">
+	<link href="page.css" rel="stylesheet">
+	<link href="Sprites/sprite.css" rel="stylesheet">
+</head>
+
+<body>
+	<h1 class="title">Dabbing Simulator</h1>
+	<div class="dabframe">
+		<div id="imgcontainer"></div>
+	</div>
+	
+	<!-- Just to test sprite -->
+	<script>
+		function sprite(n) {
+			if (n == 1) {
+				document.querySelector("#imgcontainer").className = "bg1";
+				changeSpriteState(10);
+			} else {
+				document.querySelector("#imgcontainer").className = "bg" + n;
+				changeSpriteState(n-1);
+			}
+		}
+		
+		function changeSpriteState(n) {
+			setTimeout(function() {
+				sprite(n);
+			}, 100)
+		}
+		
+		sprite(10);
+	</script>
+</body>
+<footer>
+<!--Notes:
+- Make sure panorama is loaded before starting
+-->
+</footer>
